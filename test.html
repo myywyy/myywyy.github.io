@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Test</title>
+		<script>
+				
+		window.onload=function(){
+		
+		 var together = new Date();
+		    together.setFullYear(2016,2 , 7); 			//时间年月日
+		    together.setHours(22);						//小时	
+		    together.setMinutes(2);					//分钟
+		    together.setSeconds(0);					//秒前一位
+		    together.setMilliseconds(2);	
+		
+
+		var current = Date();
+
+
+     document.getElementById("11").innerHTML="我们："+together; 
+	 document.getElementById("22").innerHTML="现在："+current; 
+	var seconds = (Date.parse(current) - Date.parse(together)) / 1000;
+	var days = Math.floor(seconds / (3600 * 24));
+	seconds = seconds % (3600 * 24);
+	var hours = Math.floor(seconds / 3600);
+	if (hours < 10) {
+		hours = "0" + hours;
+	}
+	seconds = seconds % 3600;
+	var minutes = Math.floor(seconds / 60);
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+	seconds = seconds % 60;
+	if (seconds < 10) {
+		seconds = "0" + seconds;
+	}
+var num = 24+30+31+30+31+28
+ document.getElementById("rr").innerHTML=num ;
+
+		}
+
+
+		</script>
+	</head>
+	<body>
+			<div id="11"></div>
+			<div id="22"></div>
+<div>三月份:24</div><br/>
+<div>四月份:30</div><br/>
+<div>五月份:31</div><br/>
+<div>六月份:30</div><br/>
+<div>七月份:31</div><br/>
+<div>八月份:28</div><br/>
+一共：<div id="rr"></div><br/>
+	</body>
+</html>
